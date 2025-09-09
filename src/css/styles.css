@@ -12,7 +12,7 @@
 
 /* Sections style */
 @import url('./header.css');
-@import url('./vite-promo.css');
-@import url('./badges.css');
-@import url('./back-link.css');
+@import url('./js-module-1.css');
+@import url('./js-module-2.css');
+@import url('./js-module-3.css');
 @import url('./footer.css');
