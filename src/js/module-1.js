@@ -55,8 +55,8 @@ console.log(String(undefined));
 
 /* Неявне перетворення  */
 
-//console.log(5 + '5');
-//console.log('5' + true);
+/* console.log(5 + '5');
+console.log('5' + true); */
 //console.log('5' + undefined);
 //console.log('5' + undefined);
 

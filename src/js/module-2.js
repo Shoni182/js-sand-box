@@ -1,6 +1,6 @@
 //;  MODULE 2 Java Script
 
-//! --- Розгалуження =============================
+//! ---  1 Розгалуження =============================
 
 // #region //: - Інструкція if
 
@@ -142,19 +142,19 @@ console.log(dayTime(3)); */
 
 // #endregion
 
-// #region //; - Задачі
+// #region //; - Задачі "✅"
 
 /* //; Задача-1
 Напишіть функцію для охоронця нічного клубу яка приймає два параметри age та balance. Функція повинна повернути рядок "Wellcome" якщо age більший за 18 та balance більший за 100. В іншому випадку функцію повинна повернути рядок "Goodbye". */
 
 /* function security(age, balance) {
   if (age >= 18 && balance >= 100) {
-    return "Wellcome";
+    return 'Wellcome';
   } else {
-    return "Goodbye"
+    return 'Goodbye';
   }
 }
-console.log(security(18, 100)) */
+console.log(security(17, 100)); */
 
 //? end
 /* //; Задача-2
@@ -281,19 +281,53 @@ console.log(isDay('', 0));
 /* //; Задача-8
 Напишіть функцію, яка приймає один параметр year. Якщо рік ділиться на 4 і не ділиться на 100, або ділиться на 400, поверніть "Високосний рік", в іншому випадку - "Звичайний рік". */
 
+/* function isYear(year) {
+  if ((year % 4 == 0 && year % 100 !== 0) || year % 400 == 0) {
+    return 'Високосний рік';
+  } else {
+    return 'Звичайний рік';
+  }
+}
+
+console.log(isYear(2028)); */
+
 //? end
 /* //; Задача-9
 Напишіть функцію, яка приймає два параметри: hasInvitation (булевий) і isFriend (булевий). Якщо у вас є запрошення або ви друг, поверніть "Ви запрошені", в іншому випадку поверніть "Вхід заборонено". */
+
+/* function isHasInvitation(hasInvitation, isFriend) {
+  const meInvited = 1;
+  if (true == isFriend || true == hasInvitation) {
+    return 'Ви запрошені';
+  } else {
+    return 'Вхід заборонено';
+  }
+}
+
+console.log(isHasInvitation(0, 0)); */
 
 //? end
 /* //; Задача-10
 Напишіть функцію, яка приймає вік особи (age). Якщо вік менший за 12, поверніть "Дитина", якщо від 12 до 18, поверніть "Підліток", якщо від 18 до 60, поверніть "Дорослий", більше 60 - "Пенсіонер". */
 
+/* function isPersonAdult(age) {
+  if (age < 12) {
+    return 'Дитина';
+  } else if (age >= 12 && age <= 18) {
+    return 'Підліток';
+  } else if (age > 18 && age <= 60) {
+    return 'Дорослий';
+  } else {
+    return 'Пенсіонер';
+  }
+}
+console.log(isPersonAdult());
+ */
 //? end
 
 // #endregion
 
-//! --- Логічні Оператори ==========================
+//! ---  2 Логічні Оператори ==========================
 
 // #region //: - Перетворення типів:
 
@@ -391,7 +425,7 @@ console.log(canChat('hero everynyan')); */
 
 // #endregion
 
-//! --- Методи рядків ============================
+//! ---  3 Методи рядків ============================
 
 // #region //: - Метод slice()
 //* str.slice(startIndex, endIndex)
@@ -470,7 +504,7 @@ console.log(getFileName('style.css')); */
 
 // #endregion
 
-//! --- Цикли ============================
+//! --- 4 Цикли ============================
 
 // #region //: - Цикл while
 
@@ -484,11 +518,11 @@ console.log(getFileName('style.css')); */
   }
   return sum;
 }
-console.log(calculateTotal(3)); */
-
+console.log(calculateTotal(18));
+ */
 // #endregion
 
-// #region //: - Цикл do…while
+// #region //: - Цикл do…while|
 
 //; Приклад
 
@@ -497,8 +531,8 @@ console.log(calculateTotal(3)); */
 do {
   console.log(`Count: ${count}`);
   count += 1;
-} while (count < 5); */
-
+} while (count < 5);
+ */
 // #endregion
 
 // #region //: - Цикл for
@@ -520,8 +554,54 @@ console.log(sumUpTo(3)); */
 
 // #region //: - Інкремент ++ і декремент --
 
-//: Інкремент ++
+//! ПОВТОРИТИ І ЗРОБИТИ САМОМУ
+/* console.log(6 % 12); */
 
-//: Декремент --
+/* function calculateEvenTotal(number) {
+  
+  for (let i = 1; i <= number; i++) {
+    
+  }
+  return total;
+}
+console.log(calculateEvenTotal(6)); */
+
+// #endregion
+
+// #region //: - Оператор break
+
+/* let start = 6;
+let end = 17;
+let number;
+
+for (let i = start; i <= end; i++) {
+  if (i % 5 == 0) {
+    number = i;
+    break;
+  }
+}
+
+console.log(number); */
+
+/* console.log(20 % 5); */
+
+// #endregion
+
+// #region //: - Оператор break і функції
+
+/* function findNumber(start, end, divisor) {
+  for (let i = start; i <= end; i++) {
+    let sum = 0;
+    if (i % divisor == 0) {
+      sum = i;
+      return sum;
+    }
+  }
+}
+console.log(findNumber(2, 6, 5)); */
+
+// #endregion
+
+// #region //; Задачі
 
 // #endregion
