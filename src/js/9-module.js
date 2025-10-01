@@ -1,4 +1,4 @@
-//; Module №
+//; Module №  9. Модульність коду і bundler Vite
 
 //! 1 ------ -------
 // #region //: -
