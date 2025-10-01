@@ -4,8 +4,8 @@
 
 // #region //: - Масиви
 //? Масив це адресса до якої ми звертаємость навість через const
-/* 
-const planets = ['earth', 'mars', 'venus']; //? array strings
+
+/* const planets = ['earth', 'mars', 'venus']; //? array strings
 const number = [1, 2, 3, 4, 5]; //?array numbers
 
 const mixed = ['apple', 10, true];
@@ -16,8 +16,8 @@ console.log(planets[1]);
 const appleItems = ['iphone 15', 'iphone 16', 'iphone 17', 'macBook', 'iMac'];
 const iphones = appleItems[2];
 
-console.log(iphones);
- */
+console.log(iphones); */
+
 // #endregion
 
 // #region //: - Перевизначення значення елемента
@@ -42,9 +42,10 @@ if (planets.length >= 3) {
   console.log('more');
 } else {
   console.log('less');
-} */
+}
 
-/* function getOrderQuantity(order) {
+
+function getOrderQuantity(order) {
   return order.length;
 }
 console.log(getOrderQuantity(['apple', 'peach', 'pear', 'banana'])); */
@@ -138,7 +139,7 @@ console.log(b); */
 
 //! 2 --- Методи масиву =============================
 
-// #region //: - Метод join()
+// #region //: - Метод join( чимось ) Обʼєднати
 
 //; 1
 /* const words = ['Star Wars', 'Obi Wan', 'Lea', 'Nabu'];
@@ -158,21 +159,21 @@ console.log(isDifWord('User_name is_different')); */
 //; 3
 
 /* function getLenght(array) {
-    let words = array.join('');
-    
-    return words.length;
-    }
-    
-    console.log(getLenght(['Mango', 'hurries', 'to', 'the', 'train'])); */
+  let words = array.join('');
+
+  return words.length;
+}
+
+console.log(getLenght(['Mango', 'hurries', 'to', 'the', 'train'])); */
 
 /* function getLength(array) {
-        const numberWord = array.getLength(0);
-        }
-        
-        console.log(getLength('words')); */
+  const numberWord = array.getLength(0);
+}
+
+console.log(getLength('words')); */
 // #endregion
 
-// #region //: - Метод split()
+// #region //: - Метод split( чимось ) роздільник Перетворює на масив
 //; 1
 /* const item = 'macBook';
 const letters = item.split('');
@@ -189,12 +190,18 @@ console.log(letters); */
 
 console.log(calculateEngravingPrice('Work and travel', 5)); */
 
+//; 3
+
+/* const Word = 'StarWars';
+const splitedWord = Word.split('');
+console.log(splitedWord);
+ */
 // #endregion
 
-// #region //: - Метод slice()
+// #region //: - Метод slice( індекс ) скопіювати вибраний діапазон
 
 //; 1
-//? Перше число є включнийм останнє ні це типу до того числа.
+//? Перше число є включнийм останнє ні, це типу до того числа.
 
 /* const phones = ['Iphone 17', 'Google Pixel 9', 'Samsung Galaxy 22', 'Xiomi'];
 
@@ -221,9 +228,17 @@ console.log(orbits.slice(3));
 const auto = ['Golf', 'Mazda', 'Nissan', 'BMW', 'audi'];
 console.log(auto.slice(-3)); */
 
+//; 3
+
+/* const message = "Hello I'm here to drink a coffee";
+const array = message.split(' ');
+const count = array.slice(0, 4);
+
+console.log(count);
+ */
 // #endregion
 
-// #region //: - Метод concat()
+// #region //: - Метод concat() обʼєднує масиви = новий масив
 //; 1
 //? для обєднання масивів. Створюєнься новий масив попередні такі самі
 
@@ -263,7 +278,7 @@ console.log(getSlice(['Mango', 'Poly', 'Ajax'], 'Poly')); */
 
 // #endregion
 
-// #region //: - Метод push()
+// #region //: - Метод push() додавання елементу в кінець масиву
 //; 1
 /* const planets = ['Earth', 'Mars', 'Saturn', 'Jupiter'];
 planets.push('Neptun');
@@ -276,8 +291,8 @@ console.log(planets);
 for (let i = 0; i < 10; i++) {
   asteroids.push(`Asteroid-Number:${i}`);
 }
-console.log(asteroids); */
-
+console.log(asteroids);
+ */
 //; 3
 
 /* function createArrayOfNumbers(min, max) {
@@ -299,27 +314,102 @@ console.log(createArrayOfNumbers(1, 3)); */
 
 //! 3 --- Ітерація по масиву  =============================
 
-// #region //: -
+// #region //: - Ітерація по масиву
+//? використання for
+
+//; 1
+/* const planets = ['neptun', 'earth', 'mars', 'jupiter'];
+for (let i = 0; i < planets.length; i++) {
+  console.log(planets[i]);
+} */
+
+//; 2
+//? В даному випадку було важко тому, що не можна ставити змінну в цикл
+
+/* function calculateTotalPrice(order) {
+  let total = 0; //! Потрібно змінну ДО функції щоб сума збільшувалась!!!
+  for (let i = 0; i < order.length; i += 1) {
+    total += order[i];
+  }
+  return total; //! ретурт має бути тут!
+}
+console.log(calculateTotalPrice([412, 371, 94, 63, 176])); */
+
+//; 3
+
+/* function getEvenNumbers(start, end) {
+  let numArray = [];
+  for (let i = start; i <= end; i++) {
+    if (i % 2 === 0) {
+      numArray.push(i);
+    } else {
+      numArray.push(); //! має бути пустий щоб пропускав
+    }
+  }
+  return numArray;
+}
+
+console.log(getEvenNumbers(3, 11)); */
 
 // #endregion
 
-// #region //: -
+// #region //: - Метод includes()
+// `${item} is available to order!`;
+// "Sorry! We are out of stock!"
+//; 1
+/* function checkStorage(storage, item) {
+  let lowerCase = [];
+  let itemLow = item.toLowerCase();
+
+  for (let i = 0; i < storage.length; i++) {
+    lowerCase.push(storage[i].toLowerCase()); //! тут return непотрібен бо він заповнює масив
+    //! lowerCase який знаходиться вище
+  }
+
+  if (lowerCase.includes(itemLow)) {
+    return `${itemLow} is available to order!`;
+  } else {s
+    return 'Sorry! We are out of stock!';
+  }
+}
+
+console.log(checkStorage(['apple', 'pLum', 'pear'], 'PeAr')); */
+
+//; 2
+/* function getCommonElements(array1, array2) {
+  let arrayTotal = [];
+  for (let i = 0; i < array1.length; i++) {
+    if (array2.includes(array1[i])) {
+      arrayTotal.push(array1[i]);
+    }
+  }
+  return arrayTotal;
+}
+
+console.log(getCommonElements([24, 12, 27, 3], [12, 8, 3, 36, 27])); */
 
 // #endregion
 
-// #region //: -
+// #region //: - Цикл for...of
 
-// #endregion
+//; 1
+/* const planets = ['Earth', 'Mars', 'Venus'];
 
-// #region //: -
+for (const planet of planets) {
+  console.log(planet);
+}
+ */
+//; 2
 
-// #endregion
+/* function calculateTotalPrice(order) {
+  let total = 0;
+  for (const price of order) {
+    total += price;
+  }
+  return total;
+}
 
-// #region //: -
-
-// #endregion
-
-// #region //: -
+console.log(calculateTotalPrice([12, 85, 37, 4])); */
 
 // #endregion
 
@@ -329,31 +419,84 @@ console.log(createArrayOfNumbers(1, 3)); */
 
 //! 4 --- Функції (частина 2)  =============================
 
-// #region //: -
+// #region //: - Псевдомасив arguments
+//; 1
+/* function sum(a, b) {
+  console.log(arguments);
+  return a + b;
+}
+
+sum(2, 5); */
+
+//; 2
+
+/* function foo() {
+  // У змінній args буде повноцінний масив з усіх аргументів
+  const args = Array.from(arguments);
+  return args.join('-');
+}
+
+foo(1, 2, 3); // Поверне "1 */
+
+//; 3
+
+/* function multiply() {
+  let total = 1;
+
+  for (const arg of arguments) {
+    total *= arg;
+  }
+
+  return total;
+}
+
+console.log(multiply(1, 2, 3)); //  6
+console.log(multiply(1, 2, 3, 4)); //  24
+console.log(multiply(1, 2, 3, 4, 5)); //  120 */
+
+//; 4
+
+/* function createReversedArray() {
+
+  let array = Array.from(arguments);
+  array = array.toReversed();
+  return array;
+}
+
+console.log(createReversedArray(12, 85, 37, 4)); */
+// #endregion
+
+// #region //: - Параметри за замовчуванням
+
+//; 1
+
+/* function greet(username = 'guest') {
+  console.log(`Hello, ${username}!`);
+}
+greet('jacob');
+greet();
+ */
+
+//; 2
+
+/* function count(from, to, step = 1) {
+  console.log(`from: ${from}, to: ${to}, step: ${step} `);
+
+  for (let i = from; i <= to; i += step) {}
+}
+count(1, 15, 4); */
+
+//; 3
+
+/* function calculateTax(amount, taxRate = 0.2) {
+  return amount * taxRate;
+}
+
+console.log(calculateTax(100)); */
 
 // #endregion
 
-// #region //: -
-
-// #endregion
-
-// #region //: -
-
-// #endregion
-
-// #region //: -
-
-// #endregion
-
-// #region //: -
-
-// #endregion
-
-// #region //: -
-
-// #endregion
-
-// #region //: -
+// #region //: - Функціональний вираз
 
 // #endregion
 
