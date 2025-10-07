@@ -356,6 +356,7 @@ console.log(getEvenNumbers(3, 11)); */
 // #region //: - Метод includes()
 // `${item} is available to order!`;
 // "Sorry! We are out of stock!"
+
 //; 1
 /* function checkStorage(storage, item) {
   let lowerCase = [];
