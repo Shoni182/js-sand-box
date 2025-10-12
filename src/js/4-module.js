@@ -387,7 +387,389 @@ console.log(countTotalSalary({})); */
 
 // #endregion
 
-// #region //; - Задачі
+// #region //; - Задачі ()
+
+// #region //; Задача 1
+//* Напиши функцію, яка приймає об'єкт і новий вік.
+//* Функція повинна змінити значення властивості "age" в об'єкті на нове значення.
+//* Поверни оновлений об'єкт
+
+/* function changeAge(obj, newAge) {
+  obj.age = newAge;
+  return obj;
+}
+
+console.log(changeAge({ age: 10, name: 'Stiven,' }, 100)); */
+// #endregion
+
+// #region //; Задача 2
+//* Напиши функцію, яка приймає об'єкт і видаляє з нього властивість "age".
+//* Поверни оновлений об'єкт.
+
+/* function deleteObject(obj) {
+  delete obj.age;
+  return obj;
+}
+
+console.log(deleteObject({ age: 10, name: 'Ship', manufactured: 'Ukraine' })); */
+// #endregion
+
+// #region //; Задача 3
+//* Напиши функцію, яка приймає об'єкт і повертає значення властивості "name".
+
+/* function getName(obj) {
+  return obj.name;
+}
+
+console.log(getName({ name: 'Makr', age: 24 })); */
+
+// #endregion
+
+// #region //; Задача 4
+//* Напиши функцію, яка приймає об'єкт і повертає true, якщо властивість "address" існує в об'єкті, і false, якщо ні.
+
+//; 1
+/* function checkAddres(obj) {
+  const check = Object.keys(obj);
+  return check.includes('address');
+}
+
+console.log(checkAddres({ name: 'mark', age: 25 }));
+ */
+
+// #endregion
+
+// #region //; Задача 5
+//* Напиши функцію, яка приймає два об'єкти і об'єднує їх в один.
+//* Якщо у об'єктів є однакові властивості, значення другого об'єкта мають замінити значення першого.
+//* Поверни результат.
+
+/* function fooName(obj1, obj2) {
+  const obj3 = {
+    ...obj1,
+    ...obj2,
+  };
+  return obj3;
+}
+
+console.log(
+  fooName(
+    { name: 'Mark', age: 25, ship: 'Starship' },
+    { name: 'Mark', age: 27, ship: 'Star Fighter' }
+  )
+); */
+
+// #endregion
+
+// #region //; Задача 6
+//* Напиши функцію, яка створює об'єкт з трьома властивостями: ім'ям, віком і адресою.
+//* Якщо ім'я та вік не передані, встанови їх значення за замовчуванням ("Unknown", 0 відповідно).
+//* Поверни об'єкт.
+
+/* function createObj(object) {
+  if (!object.name) {
+    object.name = 'Unknown';
+  }
+
+  if (!object.age) {
+    object.age = 0;
+  }
+  return object;
+}
+
+console.log(createObj({ name: '', age: 0, address: 'sdfsdf' })); */
+
+// #endregion
+
+// #region //; Задача 7
+//* Напиши функцію, яка приймає об'єкт та нові значення для імені та віку.
+//* Функція повинна змінити обидві властивості в об'єкті.
+//* Поверни оновлений об'єкт.
+
+/* function person(obj, name, age) {
+  obj.name = name;
+  obj.age = age;
+  return obj;
+}
+
+console.log(person({ name: ' Mark', age: 20 }), 'Stiven', 50); */
+
+// #endregion
+
+// #region //; Задача 8
+//* Напиши функцію, яка приймає об'єкт та нову властивість "email" (якщо її немає).
+//* Якщо в об'єкті вже є "email", нічого не роби.
+//* Поверни оновлений об'єкт.
+
+/* function newEmail(obj, email) {
+  if (!obj.email) {
+    obj.email = 'empty';
+  }
+  return obj;
+}
+console.log(newEmail({ name: 'Alfred', age: 44, email: 'alfred$gmail.com' })); */
+
+// #endregion
+
+// #region //; Задача 9
+//* Напиши функцію, яка приймає об'єкт і змінює тип значення властивості "age" з числа на рядок.
+//* Поверни оновлений об'єкт.
+
+/* function changeNumber(obj) {
+  obj.age = obj.age.toString();
+
+  return obj;
+}
+console.log(changeNumber({ name: 'alfred', age: 34 })); */
+
+// #endregion
+
+// #region //; Задача 10
+//* Напиши функцію, яка приймає об'єкт і змінює значення властивості "address", але тільки якщо ця властивість вже існує.
+//* Якщо її немає, поверни об'єкт без змін.
+
+/* function changeAddress(obj, address) {
+  if (!obj.adress) {
+    obj.address = 'no adress';
+  }
+  return obj;
+}
+
+console.log(changeAddress({ name: 'Mark', email: 'Slon@gmail.com' })); */
+
+// #endregion
+
+// #region //; Задача 11
+//* Напиши функцію, яка приймає об'єкт користувача з властивостями name та city.
+//* Та повертає рядок "User {імя користувача} from {місто користувача}!"
+
+/* function personInfo(obj, name, city) {
+  obj = {
+    name,
+    city,
+  };
+
+  return `User ${obj.name} from ${obj.city} `;
+}
+
+console.log(personInfo({ age: 25, number: +300455033 }, 'Sasha', 'Uzghorod')); */
+
+// #endregion
+
+// #region //; Задача 12
+//* Напиши функцію, яка приймає масив з ключами і значеннями
+//* (наприклад, [["name", "John"], ["age", 25], ["address", "123 Street"]])
+//* і створює об'єкт з цих пар. Поверни об'єкт.
+
+/* function glueAll(arrays) {
+  const sumArray = [...arrays[0], ...arrays[1], ...arrays[2]];
+  return sumArray;
+}
+
+console.log(
+  glueAll([
+    ['name', 'John'],
+    ['age', 25],
+    ['address', '123 Street'],
+  ])
+); */
+
+// #endregion
+
+// #region //; Задача 13
+//* Напиши функцію, яка приймає масив об'єктів і змінює в кожному з них властивість "age",
+//* збільшуючи її на 1. Поверни оновлений масив об'єктів.
+
+/* function foo(objArrays) {
+  for (const item of objArrays) {
+    item.age += 1;
+  }
+  return objArrays;
+}
+
+console.log(foo([{ age: 44 }, { age: 23 }, { age: 35 }])); */
+
+// #endregion
+
+// #region //; Задача 14
+//* Створіть об'єкт contactBook, який зберігатиме список контактів
+//* та надаватиме методи для додавання, видалення та пошуку контактів.
+
+//! Приклад
+
+/* const array = [2, 5, 9];
+console.log(array);
+const index = array.indexOf(2);
+if (index > -1) {
+  // only splice array when item is found
+  array.splice(index, 1); // 2nd parameter means remove one item only
+}
+// array = [2, 9]
+console.log(array); */
+//! Задача“
+
+/* const contactBook = {
+  contactList: [],
+
+  //: додавання
+  addContact(newContact) {
+    this.contactList.push(newContact);
+  },
+
+  //: Видалення
+  removeContact(deleteUser) {
+    for (const user of this.contactList) {
+      if (user.name === deleteUser) {
+        const index = this.contactList.indexOf(user);
+        this.contactList.splice(index, 1);
+        return ` User: ${user.name} was susscessfuly deleted! `;
+      }
+    }
+    return ` User: ${deleteUser} was susscessfuly deleted! `;
+  },
+
+  //: пошук
+  searchContact(searchUser) {
+    for (const user of this.contactList) {
+      if (user.name === searchUser) {
+        return `Your request is in progress... searching ${searchUser}.... Succsess! the contact ${user.name} was found!.`;
+      }
+    }
+    return `Your request is in progress... searching ${searchUser}.... the contact ${searchUser} is not in the list! .`;
+  },
+};
+
+console.log(
+  contactBook.addContact({ name: 'Felix', age: 25, number: +38050755438 })
+);
+console.log(
+  contactBook.addContact({ name: 'Tim', age: 55, number: +380503554268 })
+);
+console.log(
+  contactBook.addContact({ name: 'Elsa', age: 35, number: +380503530568 })
+);
+
+console.log(contactBook.searchContact('Tim'));
+console.log(contactBook.contactList);
+console.log(contactBook.removeContact('Tim'));
+console.log(contactBook.contactList);
+
+console.log(contactBook.searchContact('Tim'));
+console.log(contactBook.searchContact('Elsa')); */
+
+// #endregion
+
+// #region //; Задача 15
+//* Створіть об'єкт rectangle, який представлятиме прямокутник
+//* з методами для обчислення його площі та периметра.
+//* Об'єкт повинен приймати довжини двох сторін під час створення.
+
+/* const objRectangle = {
+  aLength: 0,
+  bWidth: 0,
+
+  calcArea(aLength, bWidth) {
+    return aLength * bWidth;
+  },
+
+  calcPerimeter(aLength, bWidth) {
+    return (aLength + bWidth) * 2;
+  },
+};
+
+console.log(objRectangle.calcArea(2, 10));
+console.log(objRectangle.calcPerimeter(2, 10)); */
+
+// #endregion
+
+// #region //; Задача 16
+//* Створіть об'єкт toDoList, який зберігатиме список задач
+//* та надаватиме методи для додавання нових завдань,
+//* позначки задачі як виконаної та виведення списку завдань.
+
+/* const objTodoList = {
+  list: [],
+
+  newTask(task) {
+    this.list.push(task);
+  },
+
+  doneTask(done) {
+    for (let item of this.list) {
+      if (item.includes(done)) {
+        let i = this.list.indexOf(item);
+        item = item + ' ✅ Done';
+        return (this.list[i] = item);
+      }
+    }
+    return ' ⚠️ task with that name is not found';
+  },
+
+  showList() {
+    return this.list;
+  },
+};
+ */
+/* console.log(objTodoList.newTask('task 1 - Work on project'));
+console.log(objTodoList.newTask('task 2 - make some tea'));
+console.log(objTodoList.newTask('task 3 - goit '));
+console.log(objTodoList.newTask('task 4 - english '));
+
+console.log(objTodoList.doneTask('task 2'));
+
+console.table(objTodoList.showList());
+ */
+// #endregion
+
+// #region //; Задача 17
+//* Створіть об'єкт bankAccount, який представлятиме банківський рахунок
+//* із методами для депозиту, зняття коштів та перевірки балансу.
+//* Врахуйте обробку можливих помилок (наприклад, недостатньо коштів).
+// #endregion
+
+// #region //; Задача 18
+//* Створіть об'єкт libraryCatalog, який зберігатиме список книг у бібліотеці
+//* та надаватиме методи для додавання нових книг,
+//* пошуку книг за автором та ISBN, а також виведення списку всіх книг.
+// #endregion
+
+// #region //; Задача 19
+//* Створіть об'єкт temperatureConverter, який матиме методи
+//* для конвертації температур між градусами Цельсія та Фаренгейта.
+// #endregion
+
+// #region //; Задача 20
+//* Створіть об'єкт shoppingCart, який зберігатиме список товарів
+//* та надаватиме методи для додавання товарів,
+//* підрахунку загальної вартості та виведення списку товарів.
+// #endregion
+
+// #region //; Задача 21
+//* Створіть об'єкт socialNetworkUser, який представляє користувача соціальної мережі
+//* з полями username, friends (список друзів)
+//* та методами для додавання та видалення друзів,
+//* а також виведення списку друзів.
+// #endregion
+
+// #region //; Задача 22
+//* Створіть об'єкт musicPlayer, який зберігатиме список пісень
+//* та надаватиме методи для додавання нових пісень,
+//* відтворення, паузи та перемикання між піснями.
+// #endregion
+
+// #region //; Задача 23
+//* Створіть об'єкт myString, який буде мати наступні методи:
+//* метод reverse(), який параметром приймає рядок і повертає його в перевернутому вигляді;
+//* метод ucFirst(), який приймає рядок і повертає його з першою великою літерою;
+//* метод ucWords(), який робить заголовною першу літеру кожного слова в рядку.
+// #endregion
+
+// #region //; Задача 24
+//* Створіть об'єкт validator, який перевірятиме рядки.
+//* Наприклад, метод isEmail(str) перевіряє, чи є рядок коректним емейлом.
+//* Крім того, об'єкт має методи: isDomain(str), isDate(str), isPhone(str) —
+//* для перевірки доменів, дат та номерів телефонів відповідно.
+// #endregion
 
 // #endregion
 
@@ -505,8 +887,8 @@ console.log(getAllPropValues('price')); */
 
 // #region  //: - Методи об'єкта
 //; 1
-/* 
-const bookShelf = {
+
+/* const bookShelf = {
   books: ['The Last Kingdom', 'Dream Guardian'],
   // Це метод об'єкта
   getBooks() {
@@ -680,9 +1062,11 @@ console.log(atTheOldToad.getTotalPrice()); */
     { name: 'Speed potion', price: 460 },
     { name: 'Stone skin', price: 520 },
   ],
+
   getPotions() {
     return this.potions;
   },
+
   updatePotionName(oldName, newName) {
     for (const title of this.potions) {
       if (title.name === oldName) {
@@ -692,8 +1076,8 @@ console.log(atTheOldToad.getTotalPrice()); */
     return this.potions;
   },
 };
-console.log(atTheOldToad.updatePotionName('Speed potion', 'Invisibility'));
- */
+console.log(atTheOldToad.updatePotionName('Speed potion', 'Invisibility')); */
+
 // #endregion
 
 // #region //; - Задачі
@@ -704,16 +1088,27 @@ console.log(atTheOldToad.updatePotionName('Speed potion', 'Invisibility'));
 
 // #region  //: - Залишкові параметри ...args,rest
 
-/* function add(...args) {
+//? перетворює в масив який є ітерабельним
+//? без цього він видасть помилку. тому потрібен "...args"
+
+//; 1
+/* function add(...arg) {
   let total = 0;
 
-  for (let item of args) {
+  for (let item of arg) {
     total += item;
   }
   return total;
 }
 
 console.log(add(12, 4, 11, 48)); */
+
+//; 2
+
+/* function names(...strings) {
+  let 
+  
+} */
 
 // #endregion
 
