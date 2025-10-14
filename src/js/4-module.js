@@ -230,10 +230,6 @@ console.log(member.name); */
 
 // #endregion
 
-// #region //; - Задачі
-
-// #endregion
-
 //! 2 ------ Перебір об'єкта -------
 
 // #region  //: - Цикл for...in
@@ -879,10 +875,6 @@ console.log(getAllPropValues('price')); */
 //: А також потрібно другий ретурн ставити поза дужками for бо інакше цикл не продовжиться і перерветься на першому false
 // #endregion
 
-// #region //; - Задачі
-
-// #endregion
-
 //! 4 ------ Методи об'єкта -------
 
 // #region  //: - Методи об'єкта
@@ -1077,10 +1069,6 @@ console.log(atTheOldToad.getTotalPrice()); */
   },
 };
 console.log(atTheOldToad.updatePotionName('Speed potion', 'Invisibility')); */
-
-// #endregion
-
-// #region //; - Задачі
 
 // #endregion
 

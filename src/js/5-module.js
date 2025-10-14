@@ -412,7 +412,7 @@ console.log(planetsLengths);
 
 //; 1
 
-/* const shipHangar = [
+const shipHangar = [
   { ship: 'Green', health: 100 },
   { ship: 'Yellow', health: 43 },
   { ship: 'Dragon', health: 60 },
@@ -422,7 +422,7 @@ console.log(planetsLengths);
 ];
 
 const names = shipHangar.map(ship => ship.health);
-console.log(names); */
+console.log(names);
 
 //; 2
 
@@ -476,6 +476,8 @@ console.log(equipmnet); */
 //? array.filter((el, idx, arr) => {
 //* Тіло функції
 //? })
+
+//* знаходить всі елементи
 
 //? Не змінює оригінальний масив
 //? поелементно перебирає оригінальний масив
@@ -533,30 +535,350 @@ const booksByAuthor = books.filter(book => book.author === AUTHOR); */
 
 // #region //: - Метод find()
 
+//? знаходить перший відповідний елемент
+
+//? Не змінює оригінальний масив
+//? Поелементно перебирає оригінальний масив
+//? Повертає перший елемент, що задовільняє умову, колбек TRUE
+//? якщо ні то false і undefined
+
+/* 
+const books = [
+  {
+    title: 'The Last Kingdom',
+    author: 'Bernard Cornwell',
+    rating: 8.38,
+  },
+  {
+    title: 'Beside Still Waters',
+    author: 'Robert Sheckley',
+    rating: 8.51,
+  },
+  {
+    title: 'The Tell-Tale Heart',
+    author: 'Edgar Allan Poe',
+    rating: 7.75,
+  },
+  { title: 'Redder Than Blood', author: 'Tanith Lee', rating: 7.94 },
+];
+const BOOK_TITLE = 'The Tell-Tale Heart';
+const AUTHOR = 'Robert Sheckley';
+
+const bookWithTitle = books.find(book => book.title === BOOK_TITLE);
+const bookByAuthor = books.find(book => book.author === AUTHOR); */
+
 // #endregion
 
-// #region //: -
+//! 5 ------ Методи every, some і reduce -------
+
+// #region //: - Метод every()
+
+//? не змінює оригінальний масив
+//? поелементно перебирає оригінальний масив
+//? повертає TRUE якщо ВСІ елементи задов умову
+//? попертає FALSE якщо хоча б ОДИН ел масиву не задов умову
+//? перебирання масиву припиняється, якщо колбер повертає FALSE
+
+//; 1
+
+/* const aircrafts = [20, 40, 30, 63, 23, 144];
+
+const check = aircrafts.every(value => value >= 50);
+console.log(check);
+ */
+//; 2
+
+/* const spacePort = [
+  { name: 'Fighter', quantity: 12, status: 'Ready' },
+  { name: 'Freighter', quantity: 5, status: 'Ready' },
+  { name: 'Explorer', quantity: 8, status: 'Ready' },
+  { name: 'Mining Ship', quantity: 6, status: 'Ready' },
+  { name: 'Frigate', quantity: 3, status: 'Ready' },
+  { name: 'Destroyer', quantity: 2, status: 'Ready' },
+  { name: 'Shuttle', quantity: 10, status: 'Ready' },
+  { name: 'Carrier', quantity: 1, status: 'Ready' },
+  { name: 'Drone', quantity: 24, status: 'Ready' },
+  { name: 'Command Ship', quantity: 1, status: 'Ready' },
+];
+
+const isShipReady = spacePort.every(el => el.status === 'Ready');
+
+console.log(isShipReady); */
 
 // #endregion
 
-// #region //: -
+// #region //: - Метод some()
+
+//? Повертає true, якщо хоча б один елемент масиву задовольняє умову
+//? Повертає false, якщо жоден елемент масиву не задовольняє умову
+//?Перебирання масиву припиняється, якщо колбек повертає true
+
+//; 1
+
+/* const ships = [
+  { name: 'Fighter', ammo: 20 },
+  { name: 'Freighter', ammo: 0 },
+  { name: 'Destroyer', ammo: 5 },
+  { name: 'Drone', ammo: 0 },
+  { name: 'Frigate', ammo: 12 },
+];
+
+const isAmmoisFull = ships.some(el => el.ammo >= 2);
+console.log(isAmmoisFull);
+ */
+// #endregion
+
+// #region //: - Метод reduce()
+//? не змінює масив
+//? повертає все що завгодно масив, рядок обєкт число
+//? може замінити всі інші перебираючі методи
+
+//? очікує два параметри це колбек функція та НЕ обовязковий
+//? initialValue
+
+// ? callback fo очікує 4 параметри більшість із них не обовязкові
+//? ало повинна бути строга постідовність
+
+//? 1. previousValue - accumulator проміжний результат - конвеєр
+//? 2. поточний елемент масиву
+//? 3. індекс поточної ітерації
+//? 4. посилання на новий вихіжний масив
+
+//; 1
+//: обовязково із return!
+
+/* const total = [1, 2, 3, 10].reduce((prevNum, number) => {
+  return prevNum + number;
+}, 0);
+
+console.log(total); */
+
+//; 2
+
+/* const players = {
+  mango: 1270,
+  poly: 468,
+  ajax: 710,
+  kiwi: 244,
+};
+const playtimes = Object.values(players); // [1270, 468, 710, 244]
+
+const totalPlayTime = playtimes.reduce((acc, time) => {
+  return (acc += time);
+}, 0);
+
+console.log(totalPlayTime);
+
+const averagePlayTime = totalPlayTime / playtimes.length;
+ */
+// #endregion
+
+// #region //: - Метод reduce() і масив об'єктів
+
+/* const players = [
+  { name: 'Mango', playtime: 1270, gamesPlayed: 4 },
+  { name: 'Poly', playtime: 469, gamesPlayed: 2 },
+  { name: 'Ajax', playtime: 690, gamesPlayed: 3 },
+  { name: 'Kiwi', playtime: 241, gamesPlayed: 1 },
+];
+const totalAveragePlaytimePerGame = players.reduce((acc, player) => {
+  return player.playtime / player.gamesPlayed + acc;
+}, 0);
+
+console.log(totalAveragePlaytimePerGame); */
+
+/* console.log(totalAveragePlaytimePerGame); */
 
 // #endregion
 
-// #region //: -
+//! 6 ------  Метод toSorted-------
+
+// #region //: - Метод toSorted()
+
+//? array.toSorted();
+//? сортує вихідний масив
+//? повертає новий масив
+//? за замовччуванням сортує за зростанням
+
+/* //? arr.toSorted((a, b) => {
+  //callback function bodu
+})
+ */
+//; 1
+
+/* const ammo = [22, 51, 1, 323, 43, 34];
+const sortedAmmo = ammo.toSorted((a, b) => b - a);
+
+console.log(sortedAmmo); */
+
+//?
 
 // #endregion
 
-//! 5 ------ -------
-// #region //: -
+// #region //: - Свій порядок сортування чисел .
+//; Сортування за зростанням
+//? a - перший ел для порівняння
+//? б -  другий ел для порівняння
+
+//? Якщо виклик compareFunction(a, b) повертає будь-яке негативне значення,
+//? тобто a < b, сортування поставить a перед b.
+
+/* const scores = [12, 42, 33, 9, 133];
+const assendingScorest = scores.toSorted((a, b) => a - b);
+
+console.log(assendingScorest);
+ */
+//; Сортування за спаданням
+//? Якщо виклик compareFunction(a, b) повертає будь-яке позитивне значення, тобто b більше a, сортування поставить b перед a.
+
+/* const scores2 = [12, 42, 33, 9, 133];
+const assendingScorest2 = scores.toSorted((a, b) => b - a);
+
+console.log(assendingScorest2);
+ */
+//; 3
+
+//? Якщо виклик compareFunction(a, b) поверне 0, сортування залишить a і b незмінними по відношенню один до одного, але відсортує їх по відношенню до всіх інших елементів.
+
+//? Зверни увагу, що при сортуванні масиву чисел і передачі в метод toSorted() колбек-функції, числа вже не будуть приводитися до рядків, тобто їх сортування буде очікуваним і звичним.
 
 // #endregion
 
-// #region //: -
+// #region //: - Свій порядок сортування рядків
+
+//* firstString.localeCompare(secondString)
+// повертає 1 якщо 1s після 2s
+// повертає -1 якщо 2s після 1s
+// повертає 0 якщо 1s = 2s
+
+/* console.log('star'.localeCompare('star')); */
+
+//; 2
+
+/* const authors = [
+  'Tanith Lee',
+  'Bernard Cornwell',
+  'Robert Sheckley',
+  'Edgar Allan Poe',
+  'Howard Lovecraft',
+];
+
+const authorsInAlphabetOrder = authors.toSorted((a, b) => a.localeCompare(b));
+
+const authorsInReversedOrder = authors.toSorted((a, b) => b.localeCompare(a));
+
+console.table(authorsInAlphabetOrder);
+console.table(authorsInReversedOrder); */
 
 // #endregion
 
-// #region //: -
+// #region //: - Сортування об'єктів
+//; 1
+
+/* const starships = [
+  { name: 'Serenity', fuel: 550, guns: 350 },
+  { name: 'Millennium Falcon', fuel: 900, guns: 700 },
+  { name: 'Nostromo', fuel: 320, guns: 120 },
+  { name: 'Enterprise', fuel: 1200, guns: 950 },
+  { name: 'Red Dwarf', fuel: 750, guns: 580 },
+];
+
+const byFuelAscending = starships.toSorted(
+  (maxFuel, minFuel) => maxFuel.fuel - minFuel.fuel
+);
+
+const byGundRoundDescending = starships.toSorted(
+  (maxRounds, minRounds) => minRounds.guns - maxRounds.guns
+);
+
+console.table(byFuelAscending);
+console.table(byGundRoundDescending); */
+
+//; 2
+
+/* const books = [
+  {
+    title: 'The Last Kingdom',
+    author: 'Bernard Cornwell',
+    rating: 8.38,
+  },
+  {
+    title: 'Beside Still Waters',
+    author: 'Robert Sheckley',
+    rating: 8.51,
+  },
+  {
+    title: 'The Tell-Tale Heart',
+    author: 'Edgar Allan Poe',
+    rating: 7.75,
+  },
+  {
+    title: 'Redder Than Blood',
+    author: 'Tanith Lee',
+    rating: 7.94,
+  },
+  {
+    title: 'Enemy of God',
+    author: 'Bernard Cornwell',
+    rating: 8.67,
+  },
+];
+
+const sortedByAuthorName = books.toSorted((a, b) =>
+  b.author.localeCompare(a.author)
+);
+
+const sortedByReversedAuthorName = books.toSorted((a, b) =>
+  a.author.localeCompare(b.author)
+);
+
+const sortedByAscendingRating = books.toSorted(
+  (topRating, lowRating) => topRating.rating - lowRating.rating
+);
+
+const sortedByDescentingRating = books.toSorted(
+  (topRating, lowRating) => lowRating.rating - topRating.rating
+);
+
+console.table(sortedByAuthorName);
+console.table(sortedByReversedAuthorName);
+ */
+// #endregion
+
+// #region //: - Ланцюжки методів
+
+//; 1
+/* const books = [
+  {
+    title: 'The Last Kingdom',
+    author: 'Bernard Cornwell',
+    rating: 8.38,
+  },
+  {
+    title: 'Beside Still Waters',
+    author: 'Robert Sheckley',
+    rating: 8.51,
+  },
+  {
+    title: 'The Tell-Tale Heart',
+    author: 'Edgar Allan Poe',
+    rating: 7.75,
+  },
+  { title: 'Redder Than Blood', author: 'Tanith Lee', rating: 7.94 },
+  {
+    title: 'The Dreams in the Witch House',
+    author: 'Howard Lovecraft',
+    rating: 8.67,
+  },
+];
+const MIN_BOOK_RATING = 8;
+
+const names = books
+.filter(book => book.rating >= MIN_BOOK_RATING)
+  .map(book => book.author)
+  .toSorted((a, b) => a.localeCompare(b));
+
+console.log(names); */
 
 // #endregion
 
