@@ -1,45 +1,91 @@
 //; Module №6 ООП. Класи
 
 //! 1 ------ -------
-// #region //: -
-// #region //: -
-// #region //: -
-// #region //: -
-// #region //: -
-// #region //; - Задачі
+
+// #region  //: -
 
 // #endregion
+
+// #region  //: -
+
+// #endregion
+
+// #region  //: -
+
+// #endregion
+
+// #region  //: -
+
+// #endregion
+
 //! 2 ------ -------
-// #region //: -
-// #region //: -
-// #region //: -
-// #region //: -
-// #region //: -
-// #region //; - Задачі
+
+// #region  //: -
 
 // #endregion
+
+// #region  //: -
+
+// #endregion
+
+// #region  //: -
+
+// #endregion
+
+// #region  //: -
+
+// #endregion
+
 //! 3 ------ -------
-// #region //: -
-// #region //: -
-// #region //: -
-// #region //: -
-// #region //: -
-// #region //; - Задачі
+// #region  //: -
 
 // #endregion
+
+// #region  //: -
+
+// #endregion
+
+// #region  //: -
+
+// #endregion
+
+// #region  //: -
+
+// #endregion
+
 //! 4 ------ -------
-// #region //: -
-// #region //: -
-// #region //: -
-// #region //: -
-// #region //; - Задачі
+// #region  //: -
+
+// #endregion
+
+// #region  //: -
+
+// #endregion
+
+// #region  //: -
+
+// #endregion
+
+// #region  //: -
 
 // #endregion
 //! 5 ------ -------
-// #region //: -
-// #region //: -
-// #region //: -
-// #region //: -
-// #region //; - Задачі
+// #region  //: -
+
+// #endregion
+
+// #region  //: -
+
+// #endregion
+
+// #region  //: -
+
+// #endregion
+
+// #region  //: -
+
+// #endregion
+
+// #region  //; - Задачі
 
 // #endregion
