@@ -412,7 +412,7 @@ console.log(planetsLengths);
 
 //; 1
 
-const shipHangar = [
+/* const shipHangar = [
   { ship: 'Green', health: 100 },
   { ship: 'Yellow', health: 43 },
   { ship: 'Dragon', health: 60 },
@@ -422,7 +422,7 @@ const shipHangar = [
 ];
 
 const names = shipHangar.map(ship => ship.health);
-console.log(names);
+console.log(names); */
 
 //; 2
 
