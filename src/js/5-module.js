@@ -398,8 +398,7 @@ planets.map(planet => {
   planetsLengths.push(planet.length);
 });
 
-console.log(planetsLengths);
- */
+console.log(planetsLengths); */
 
 //; 2
 
