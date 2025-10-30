@@ -1,6 +1,28 @@
 //; Module № 8. Події та бібліотеки
 
-//! 1 ------ -------
+//! 1 ------ Делегування подій  -------
+
+// #region  //: -
+
+const parent = document.querySelector('#parent');
+const child = document.querySelector('#child');
+const descendant = document.querySelector('#descendant');
+
+// #endregion
+
+// #region  //: -
+
+// #endregion
+
+// #region  //: -
+
+// #endregion
+
+// #region  //: -
+
+// #endregion
+
+//! 2 ------  Бібліотеки -------
 
 // #region  //: -
 
@@ -18,8 +40,7 @@
 
 // #endregion
 
-//! 2 ------ -------
-
+//! 3 ------ Деструктуризація -------
 // #region  //: -
 
 // #endregion
@@ -36,24 +57,7 @@
 
 // #endregion
 
-//! 3 ------ -------
-// #region  //: -
-
-// #endregion
-
-// #region  //: -
-
-// #endregion
-
-// #region  //: -
-
-// #endregion
-
-// #region  //: -
-
-// #endregion
-
-//! 4 ------ -------
+//! 4 ------   Деструктуризація масивів -------
 // #region  //: -
 
 // #endregion
