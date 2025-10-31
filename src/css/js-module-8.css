@@ -1,14 +1,16 @@
 /*; 8  */
 
+/* ! 1 ------ Делегування подій ------- */
+
 /*: Поширення подій  */
 /* #region  */
+
 #parent,
 #child,
 #descendant {
     margin: 16px;
     padding: 16px;
     border: 4px solid #212121;
-    /*   border-radz–ius: 8px; */
     color: #fff;
     font-weight: 500;
     font-size: 20px;
@@ -28,3 +30,53 @@
 }
 
 /* #endregion */
+
+
+/*: Делегування подій */
+/* #region  */
+
+/* #endregion */
+
+/*: Перевірка цільового елемента події*/
+/* #region  */
+body {
+    margin: 8px;
+    font-family: sans-serif;
+}
+
+.output {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.color-palette {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
+    gap: 4px;
+}
+
+.color-palette .item {
+    padding: 0;
+    margin: 0;
+    border: none;
+    border-radius: 4px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: transform 250ms ease-in-out;
+}
+
+.color-palette .item:hover {
+    transform: scale(1.1);
+}
+
+/* #endregion */
+
+
+
+
+/* ! 2 ------ Бібліотеки ------- */
+/* ! 3 ------ Деструктуризація ------- */
+/* ! 4 ------  Деструктуризація масивів ------- */
