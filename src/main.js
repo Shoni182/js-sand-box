@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import './js/1-module';
 import './js/2-module';
 import './js/3-module';
