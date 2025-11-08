@@ -21,6 +21,10 @@
 @import url('./footer.css');
 
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   padding: 16px;
 }

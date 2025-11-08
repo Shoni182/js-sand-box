@@ -243,41 +243,41 @@ console.log(ship); */
 // Використовуй властивість element.innerHTML для додавання тільки у разі,
 // — коли елемент element порожній або
 // — якщо потрібно повністю замінити вміст element
-//: Читання
-//? Властивість innerHTML зберігає вміст елемента, включно з тегами, у вигляді рядка. Значення, що повертається, — це завжди валідний HTML-код.
+// //; Читання
+// //? Властивість innerHTML зберігає вміст елемента, включно з тегами, у вигляді рядка. Значення, що повертається, — це завжди валідний HTML-код.
 
-/* const article = document.querySelector('.article');
-console.log(article.innerHTML);
+// const article = document.querySelector('.article');
+// console.log(article.innerHTML);
 
-const title = document.querySelector('.article .title');
-console.log(title.innerHTML);
+// const title = document.querySelector('.article .title');
+// console.log(title.innerHTML);
 
-const text = document.querySelector('.article .text');
-console.log(text.innerHTML); */
+// const text = document.querySelector('.article .text');
+// console.log(text.innerHTML);
 
-//: Зміна
+// //; Зміна
 
-/* const title = document.querySelector('.article .title');
-title.innerHTML = 'New and <span style="color:red">Improved</span> title'; */
+// const title = document.querySelector('.article .title');
+// title.innerHTML = 'New and <span style="color:red">Improved</span> title';
 
-//? Якщо у властивість innerHTML записати порожній рядок, то вміст елемента буде очищено. Це простий і швидкий спосіб видалення всього вмісту.
+// //? Якщо у властивість innerHTML записати порожній рядок, то вміст елемента буде очищено. Це простий і швидкий спосіб видалення всього вмісту.
 
-/* const hangar = ['Dark S', 'Yellow Xwing', 'FighterJEt'];
-const list = document.querySelector('.list');
+// const hangar = ['Dark S', 'Yellow Xwing', 'FighterJEt'];
+// const list = document.querySelector('.list');
 
-const markup = hangar.map(ship => `<li"> ${ship} </li> <br/>`).join('');
-console.log(markup);
+// const markup = hangar.map(ship => `<li"> ${ship} </li> <br/>`).join('');
+// console.log(markup);
 
-list.innerHTML = markup; */
+// list.innerHTML = markup;
 
-//: нове значення
+//; нове значення
 
-/* const article = document.querySelector('.article');
-const htmlString = `<p class="article-text">Nullam quis ante. Vestibulum dapibus nunc ac augue. In consectetuer turpis ut velit.</p>
-   <a class="link" href="#">Read more...</a>`;
+// const article = document.querySelector('.article');
+// const htmlString = `<p class="article-text">Nullam quis ante. Vestibulum dapibus nunc ac augue. In consectetuer turpis ut velit.</p>
+//    <a class="link" href="#">Read more...</a>`;
 
-article.innerHTML = htmlString;
-console.log(article); */
+// article.innerHTML = htmlString;
+// console.log(article);
 
 // #endregion
 
@@ -289,17 +289,18 @@ console.log(article); */
 
 //; element.insertAdjacentHTML(position, string)
 
-/* const list = document.querySelector('.list');
+// const list = document.querySelector('.list');
 
-const newTech = ['React', 'TypeScript', 'Node.js'];
-const markup = newTech
-  .map(tech => `<li class="list-item new">${tech}</li>`)
-  .join('');
+// const newTech = ['React', 'TypeScript', 'Node.js'];
 
-list.insertAdjacentHTML('beforeend', markup);
+// const markup = newTech
+//   .map(tech => `<li class="list-item new">${tech}</li>`)
+//   .join('');
 
-list.insertAdjacentHTML('beforebegin', '<h2>Popular tech</h2>');
- */
+// list.insertAdjacentHTML('beforeend', markup);
+
+// list.insertAdjacentHTML('beforebegin', '<h2>Popular tech</h2>');
+
 // #endregion
 
 //! 4 ------ Події -------
@@ -315,54 +316,53 @@ list.insertAdjacentHTML('beforebegin', '<h2>Popular tech</h2>');
 // На одному елементі може бути будь-яка кількість обробників подій, навіть подій одного типу. Колбек-функції будуть викликатися в порядку їхньої реєстрації в коді.
 //; 1
 
-/* const button = document.querySelector('.my-button');
+// const button = document.querySelector('.my-button');
 
-button.addEventListener('click', () => {
-  console.log('The button was pressed and now the next image will appear');
-});
+// button.addEventListener('click', () => {
+//   console.log('The button was pressed and now the next image will appear');
+// });
 
+// const handleClick = () => {
+//   console.log(' Second message');
+// };
+// button.addEventListener('click', handleClick);
 
-const handleClick = () => {
-  console.log(' Second message');
-};
-button.addEventListener('click', handleClick);
- */
 // #endregion
 
 // #region  //: - Метод removeEventListener()
 
 //; element.removeEventListener(event,handler,options)
 
-/* const addListener = document.querySelector('.js-add');
-const removeListener = document.querySelector('.js-remove');
-const btn = document.querySelector('.target-btn');
+// const addListener = document.querySelector('.js-add');
+// const removeListener = document.querySelector('.js-remove');
+// const btn = document.querySelector('.target-btn');
 
-const handleClick = () => {
-  console.log('event listener is here');
-};
+// const handleClick = () => {
+//   console.log('event listener is here');
+// };
 
-addListener.addEventListener('click', () => {
-  btn.addEventListener('click', handleClick);
-  console.log('listener added');
-});
+// addListener.addEventListener('click', () => {
+//   btn.addEventListener('click', handleClick);
+//   console.log('listener added');
+// });
 
-removeListener.addEventListener('click', () => {
-  btn.removeEventListener('click', handleClick);
-  console.log('clicl event listener was removed');
-}); */
+// removeListener.addEventListener('click', () => {
+//   btn.removeEventListener('click', handleClick);
+//   console.log('clicl event listener was removed');
+// });
 // #endregion
 
 // #region  //: - Об'єкт події
 
-/* const button = document.querySelector('.btn');
+// const button = document.querySelector('.btn');
 
-const handleClick = event => {
-  console.log('event: ', event);
-  console.log('event type: ', event.type);
-  console.log('currentTarget: ', event.currentTarget);
-};
+// const handleClick = event => {
+//   console.log('event: ', event);
+//   console.log('event type: ', event.type);
+//   console.log('currentTarget: ', event.currentTarget);
+// };
 
-button.addEventListener("click", handleClick) */
+// button.addEventListener("click", handleClick)
 
 // #endregion
 
@@ -372,18 +372,18 @@ button.addEventListener("click", handleClick) */
 //? keyup - коли клавішу відпустили
 //? події клавіатури відбувається на document.
 
-/* document.addEventListener('keydown', event => {
-  console.log('Keydown: ', event);
-});
+// document.addEventListener('keydown', event => {
+//   console.log('Keydown: ', event);
+// });
 
-document.addEventListener('keyup', event => {
-  console.log('Keyup: ', event);
-});
+// document.addEventListener('keyup', event => {
+//   console.log('Keyup: ', event);
+// });
 
-document.addEventListener('keydown', event => {
-  console.log('Key', event.key);
-  console.log('KeyCode', event.code);
-}); */
+// document.addEventListener('keydown', event => {
+//   console.log('Key', event.key);
+//   console.log('KeyCode', event.code);
+// });
 
 //
 
@@ -392,23 +392,23 @@ document.addEventListener('keydown', event => {
 //! 5 ------ Події елементів форм -------
 
 // #region  //: - Подія submit
-//? відправлення форми відбувається при кліку на type="submit" або enter
-//? sumbit відбувається в tag - form
+// //? відправлення форми відбувається при кліку на type="submit" або enter
+// //? sumbit відбувається в tag - form
 
-/* const form = document.querySelector('form');
+// const form = document.querySelector('form');
 
-form.addEventListener('submit', event => {
-  console.log('submit is pressed ', event.key);
-}); */
+// form.addEventListener('submit', event => {
+//   console.log('submit is pressed ', event.key);
+// });
 
-//: відміна default значеннь
+// //: відміна default значеннь
 
-/* const form = document.querySelector('form');
+// const form = document.querySelector('form');
 
-form.addEventListener('submit', event => {
-  event.preventDefault();
-  console.log('Submit is pressed');
-}); */
+// form.addEventListener('submit', event => {
+//   event.preventDefault();
+//   console.log('Submit is pressed');
+// });
 
 //; 3
 //? Подію submit можна застосувати для валідації (перевірки) форми перед відправленням, оскільки на об'єкті події існує багато корисних властивостей, пов'язаних з елементами форми.
@@ -435,21 +435,21 @@ function handleSubmit(event) {
 
 // #region  //: - Подія change
 
-/* const select = document.querySelector('.pizza-select');
-const textOutput = document.querySelector('.text-output');
-const valueOutput = document.querySelector('.value-output');
+// const select = document.querySelector('.pizza-select');
+// const textOutput = document.querySelector('.text-output');
+// const valueOutput = document.querySelector('.value-output');
 
-select.addEventListener('change', setOutput);
+// select.addEventListener('change', setOutput);
 
-function setOutput(event) {
-  const selectedOptionValue = event.currentTarget.value;
-  const selectedOptionIndex = event.currentTarget.selectedIndex;
-  const selectedOptionText =
-    event.currentTarget.options[selectedOptionIndex].text;
+// function setOutput(event) {
+//   const selectedOptionValue = event.currentTarget.value;
+//   const selectedOptionIndex = event.currentTarget.selectedIndex;
+//   const selectedOptionText =
+//     event.currentTarget.options[selectedOptionIndex].text;
 
-  textOutput.textContent = selectedOptionText;
-  valueOutput.textContent = selectedOptionValue;
-} */
+//   textOutput.textContent = selectedOptionText;
+//   valueOutput.textContent = selectedOptionValue;
+// }
 // #endregion
 
 // #region  //: - Подія input
@@ -458,12 +458,12 @@ function setOutput(event) {
 // Вона створюється щоразу при зміні значення елемента, не чекаючи втрати фокусу.На
 // практиці input — це найголовніша подія для роботи з текстовими полями форми.
 
-/* const textInput = document.querySelector('.text-input');
-const output = document.querySelector('.output');
+// const textInput = document.querySelector('.text-input');
+// const output = document.querySelector('.output');
 
-textInput.addEventListener('input', event => {
-  output.textContent = event.currentTarget.value;
-}); */
+// textInput.addEventListener('input', event => {
+//   output.textContent = event.currentTarget.value;
+// });
 
 //Порівняємо події input і change на текстових полях і textarea
 
@@ -485,27 +485,28 @@ textInput.addEventListener('input', event => {
 //? Фокус може бути тільки на одному елементі сторінки за одиницю часу. Поточний елемент, на якому знаходиться фокус, доступний як
 // //; document.activeElement.
 
-//^Більшість елементів не можуть отримати фокус. Наприклад, якщо клікнути по <div>, то фокусування на ньому не відбудеться, тому що це не інтерактивний елемент.
+//- Більшість елементів не можуть отримати фокус. Наприклад, якщо клікнути по <div>,
+//- то фокусування на ньому не відбудеться, тому що це не інтерактивний елемент.
 
-/* const textInput = document.querySelector('.text-input');
-const setFocusBtn = document.querySelector('[data-action="set"]');
-const removeFocusBtn = document.querySelector('[data-action="remove"]');
+// const textInput = document.querySelector('.text-input');
+// const setFocusBtn = document.querySelector('[data-action="set"]');
+// const removeFocusBtn = document.querySelector('[data-action="remove"]');
 
-setFocusBtn.addEventListener('click', () => {
-  textInput.focus();
-});
+// setFocusBtn.addEventListener('click', () => {
+//   textInput.focus();
+// });
 
-removeFocusBtn.addEventListener('click', () => {
-  textInput.blur();
-});
+// removeFocusBtn.addEventListener('click', () => {
+//   textInput.blur();
+// });
 
-textInput.addEventListener('focus', () => {
-  textInput.value = 'this inpu has focus';
-});
+// textInput.addEventListener('focus', () => {
+//   textInput.value = 'this inpu has focus';
+// });
 
-textInput.addEventListener('blur', () => {
-  textInput.value = '';
-}); */
+// textInput.addEventListener('blur', () => {
+//   textInput.value = '';
+// });
 // #endregion
 
 // #region  //; - Задачі

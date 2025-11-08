@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build --base=/js-sand-box/",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "push": "git add.; git commit -m 'update'; git push;",
+    "createSrc": "mkdir src; mkdir src/css src/js; touch src/index.html src/main.js src/style.css"
   },
   "devDependencies": {
     "glob": "^11.0.0",
@@ -19,6 +21,7 @@
   "dependencies": {
     "basiclightbox": "^5.0.4",
     "lodash": "^4.17.21",
+    "simplelightbox": "^2.14.3",
     "vite-plugin-full-reload": "^1.2.0",
     "vite-plugin-html-inject": "^1.1.2"
   }

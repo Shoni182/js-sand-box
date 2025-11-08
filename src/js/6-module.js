@@ -474,16 +474,16 @@ getWage(baseSalary, overtime, rate);
 
 // #region  //: - Об'єктно-орієнтоване програмування
 
-const employee = {
-  baseSalaty: 30000,
-  overtime: 10,
-  rate: 20,
-  getWage() {
-    return this.baseSalaty + this.overtime * this.rate;
-  },
-};
+// const employee = {
+//   baseSalaty: 30000,
+//   overtime: 10,
+//   rate: 20,
+//   getWage() {
+//     return this.baseSalaty + this.overtime * this.rate;
+//   },
+// };
 
-employee.getWage();
+// employee.getWage();
 
 //^ При такому підході відсутні або майже відсутні глобальні змінні. Методи не залежать від параметрів, а використовують властивості об'єкта, які задаються при його створенні і можуть бути змінені іншими методами.
 
@@ -582,73 +582,73 @@ console.log(mango); */
 
 // #region  //: - Об'єкт параметрів
 
-/* class User {
-  constructor(params) {
-    this.name = params.name;
-    this.email = params.email;
-    this.age = params.age;
-  }
-}
+// class User {
+//   constructor(params) {
+//     this.name = params.name;
+//     this.email = params.email;
+//     this.age = params.age;
+//   }
+// }
 
-const mango = new User({
-  name: 'Mango',
-  email: 'mango@fdfdf',
-  age: 20,
-});
+// const mango = new User({
+//   name: 'Mango',
+//   email: 'mango@fdfdf',
+//   age: 20,
+// });
 
-console.log(mango); */
+// console.log(mango);
 
 // #endregion
 
 // #region  //: - Методи класу (функції)
 
-/* class User {
-  constructor(params) {
-    this.name = params.name;
-    this.email = params.email;
-  }
+// class User {
+//   constructor(params) {
+//     this.name = params.name;
+//     this.email = params.email;
+//   }
 
-  // методи НЕ розділяються комою
-  getEmail() {
-    return this.email;
-  }
+//   // методи НЕ розділяються комою
+//   getEmail() {
+//     return this.email;
+//   }
 
-  changeEmail(newEmail) {
-    this.email = newEmail;
-  }
-}
+//   changeEmail(newEmail) {
+//     this.email = newEmail;
+//   }
+// }
 
-const mango = new User({
-  name: 'Mango',
-  email: 'mango@gmail.com',
-});
+// const mango = new User({
+//   name: 'Mango',
+//   email: 'mango@gmail.com',
+// });
 
-console.log(mango.getEmail());
+// console.log(mango.getEmail());
 
-mango.changeEmail('alex@gmail.com');
+// mango.changeEmail('alex@gmail.com');
 
-console.log(mango.getEmail()); */
+// console.log(mango.getEmail());
 
 // #endregion
 
 // #region  //: - Прототип екземпляру
 
-/* class User {
-  constructor(params) {
-    this.name = params.name;
-    this.email = params.email;
-  }
+// class User {
+//   constructor(params) {
+//     this.name = params.name;
+//     this.email = params.email;
+//   }
 
-  getEmail() {
-    return this.email;
-  }
+//   getEmail() {
+//     return this.email;
+//   }
 
-  changeEmail(newEmail) {
-    this.email = newEmail;
-  }
-}
+//   changeEmail(newEmail) {
+//     this.email = newEmail;
+//   }
+// }
 
-console.log(User.prototype); // {constructor: ƒ, getEmail: ƒ, changeEmail: ƒ} */
+// console.log(User.prototype); // {constructor: ƒ, getEmail: ƒ, changeEmail: ƒ}
 
 // #endregion
 
@@ -657,52 +657,52 @@ console.log(User.prototype); // {constructor: ƒ, getEmail: ƒ, changeEmail: ƒ}
 //? # робить властивість приватною
 
 //; 1
-/* class User {
-  name;
-  #email;
+// class User {
+//   name;
+//   #email;
 
-  constructor(params) {
-    this.name = params.name;
-    this.#email = params.email;
-  }
-}
+//   constructor(params) {
+//     this.name = params.name;
+//     this.#email = params.email;
+//   }
+// }
 
-const mango = new User({
-  name: 'Mango',
-  email: 'email@email',
-});
+// const mango = new User({
+//   name: 'Mango',
+//   email: 'email@email',
+// });
 
-console.log(mango.name); */
+// console.log(mango.name);
 
 //? Для того щоб отримати або змінити значення приватної властивості використовуються публічні методи.
 
 //; 2
-/* class User {
-  name;
-  #email;
+// class User {
+//   name;
+//   #email;
 
-  constructor(params) {
-    this.name = params.name;
-    this.#email = params.email;
-  }
+//   constructor(params) {
+//     this.name = params.name;
+//     this.#email = params.email;
+//   }
 
-  getEmail() {
-    return this.#email;
-  }
+//   getEmail() {
+//     return this.#email;
+//   }
 
-  changeEmail(newEmail) {
-    this.#email = newEmail;
-  }
-}
+//   changeEmail(newEmail) {
+//     this.#email = newEmail;
+//   }
+// }
 
-const mango = new User({
-  name: 'Mango',
-  email: 'email@email',
-});
+// const mango = new User({
+//   name: 'Mango',
+//   email: 'email@email',
+// });
 
-console.log(mango.getEmail()); // "mango@mail.com"
-mango.changeEmail('mango@supermail.com');
-console.log(mango.getEmail()); // "mango@supermail.com" */
+// console.log(mango.getEmail()); // "mango@mail.com"
+// mango.changeEmail('mango@supermail.com');
+// console.log(mango.getEmail()); // "mango@supermail.com"
 
 //; 3
 
@@ -733,43 +733,43 @@ console.log(mango.getEmail()); // "mango@supermail.com" */
 
 // #region  //: - Приватні методи
 
-/* class User {
-  name;
-  #email;
+// class User {
+//   name;
+//   #email;
 
-  constructor(params) {
-    this.name = params.name;
-    this.#email = params.email;
-  }
+//   constructor(params) {
+//     this.name = params.name;
+//     this.#email = params.email;
+//   }
 
-  // Публічний метод для отримання електронної пошти
-  getEmail() {
-    return this.#email;
-  }
+//   // Публічний метод для отримання електронної пошти
+//   getEmail() {
+//     return this.#email;
+//   }
 
-  // Публічний метод для заміни електронної пошти
-  changeEmail(newEmail) {
-    if (this.#validateEmail(newEmail)) {
-      this.#email = newEmail;
-    } else {
-      console.log('invalid email format');
-    }
-  }
+//   // Публічний метод для заміни електронної пошти
+//   changeEmail(newEmail) {
+//     if (this.#validateEmail(newEmail)) {
+//       this.#email = newEmail;
+//     } else {
+//       console.log('invalid email format');
+//     }
+//   }
 
-  // Привітний метод для валідації електронної пошти
-  #validateEmail(email) {
-    return email.includes('@');
-  }
-}
-const mango = new User({
-  name: 'Mango',
-  email: 'mango@mail.com',
-});
+//   // Привітний метод для валідації електронної пошти
+//   #validateEmail(email) {
+//     return email.includes('@');
+//   }
+// }
+// const mango = new User({
+//   name: 'Mango',
+//   email: 'mango@mail.com',
+// });
 
-// Спробуємо змінити електронну пошту
-mango.changeEmail('newmail.com'); // "Invalid email format"
-mango.changeEmail('new@mail.com');
-console.log(mango.getEmail()); // "new@mail.com" */
+// // Спробуємо змінити електронну пошту
+// mango.changeEmail('newmail.com'); // "Invalid email format"
+// mango.changeEmail('new@mail.com');
+// console.log(mango.getEmail()); // "new@mail.com"
 
 // Прямий виклик приватного методу ззовні призведе до помилки
 
