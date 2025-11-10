@@ -1,12 +1,20 @@
 //; Module № 10. Асинхронний JavaScript і проміси
 
-//! 1 ------ -------
+//! 1 ------ Асинхронність -------
 
-// #region  //: -
+// #region  //: - Асинхронні операції
+
+// console.log('First log');
+
+// setTimeout(() => {
+//   console.log('second log');
+// }, 2000);
+
+// console.log('Third log');
 
 // #endregion
 
-// #region  //: -
+// #region  //: - Тайм-аут
 
 // #endregion
 
@@ -37,6 +45,7 @@
 // #endregion
 
 //! 3 ------ -------
+
 // #region  //: -
 
 // #endregion
@@ -54,9 +63,6 @@
 // #endregion
 
 //! 4 ------ -------
-// #region  //: -
-
-// #endregion
 
 // #region  //: -
 
@@ -69,7 +75,13 @@
 // #region  //: -
 
 // #endregion
+
+// #region  //: -
+
+// #endregion
+
 //! 5 ------ -------
+
 // #region  //: -
 
 // #endregion

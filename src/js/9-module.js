@@ -1,5 +1,5 @@
 //; Module №  9. Модульність коду і bundler Vite
-
+import validator from 'validator';
 //! 1 ------ Формат JSON -------
 
 // #region  //: -
@@ -143,29 +143,55 @@ console.log(parsedSettings);
 
 // #region  //: - Кейс: Форма з повідомленням
 
-const form = document.querySelector('.feedback-form');
-const localStorageKey = 'goit-example-message';
+// //  1 Знаходження форми
+// const form = document.querySelector('.feedback-form');
+// // привязка до текстареа повідомлення, так як це обʼєжк то звеотаємл до ЕЛЕММЕНТА name="message"
+// // який є в HTML  <textarea name="message"></textarea>
+// const textarea = form.elements.message;
+// // запис до значення повідомлення для запису в памяті
+// const localStorageKey = 'Storege Key ';
 
-form.addEventListener('input', evt => {
-  localStorage.setItem(localStorageKey, evt.target.value);
-});
+// //
+// textarea.value = localStorage.getItem(localStorageKey) ?? '';
 
-form.addEventListener('submit', evt => {
-  evt.preventDefault();
+// // случач на інпут, коли прописуємо текст то працює функція яка в ключ записує новий текст велйю
+// form.addEventListener('input', evt => {
+//   localStorage.setItem(localStorageKey, evt.target.value);
+// });
 
-  console.log(evt.target.elements.message.value);
-  localStorage.removeItem(localStorageKey);
-  form.reset();
-});
+// // при натисканні цде зброз базовиї настройок
+// form.addEventListener('submit', evt => {
+//   evt.preventDefault();
+
+//   //   виводиться плсилання на текст  серез лог
+//   console.log(evt.target.elements.message.value + '- MESSAGE');
+//   // при сабміті видалається ключ
+//   localStorage.removeItem(localStorageKey);
+//   // скидується форма
+//   form.reset();
+// });
+
+// 1.
 
 // #endregion
-//! 3 ------ -------
+
+//! 3 ------ Інструменти веброзробки -------
 
 // #region  //: -
 
 // #endregion
 
 // #region  //: -
+
+// console.log(
+//   'Is mango@mail.com a valid email?: ',
+//   validator.isEmail('mango@mail.com')
+// ); // Is mango@mail.com a valid email?: true
+
+// console.log(
+//   'Is Mangodogmail.com a valid email?: ',
+//   validator.isEmail('Mangodogmail.com')
+// ); // Is mango@mail.com a valid email?: false
 
 // #endregion
 
