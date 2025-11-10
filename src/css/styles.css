@@ -64,27 +64,38 @@ body {
   margin-bottom: 8px;
 }
 
-.main-module-list {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
+button {
+  background-color: #4CAF50;
+  /* зелений фон */
+  color: white;
+  /* колір тексту */
+  border: none;
+  /* без рамки */
+  padding: 10px 20px;
+  /* внутрішні відступи */
+  font-size: 16px;
+  /* розмір шрифту */
+  border-radius: 8px;
+  /* закруглені кути */
+  cursor: pointer;
+  /* курсор у вигляді руки */
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.module-list-item {
-  text-align: center;
-  width: 100px;
-  border: 1 solid green;
-  border-radius: 5px;
-  background-color: rgb(61, 121, 81);
-  transition: 150ms cubic-bezier(0.165, 0.84, 0.44, 1);
+/* ефект при наведенні */
+button:hover {
+  background-color: #45a049;
+  transform: translateY(-2px);
 }
 
-.module-list-item:hover,
-.module-list-item:focus {
-  background-color: rgb(96, 156, 116);
+/* ефект при кліку */
+button:active {
+  background-color: #3e8e41;
+  transform: translateY(0);
 }
 
-.module-list-item.active {
-  background-color: rgb(196, 103, 103);
+/* фокус (наприклад, після Tab) */
+button:focus {
+  outline: 2px solid #2e7d32;
+  outline-offset: 3px;
 }
