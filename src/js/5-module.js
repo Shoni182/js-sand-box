@@ -24,20 +24,20 @@ console.log(result); */
 
 //; 3
 
-/* function shipGreet(name) {
-  return `Welcome capitan ${name} borad on the Fire Run ship!`;
-}
+// function shipGreet(name) {
+//   return `Welcome capitan ${name} borad on the Fire Run ship!`;
+// }
 
-function shipStatus(name) {
-  return `the drive is ready to warp would you like to begin ${name}? `;
-}
+// function shipStatus(name) {
+//   return `the drive is ready to warp would you like to begin ${name}? `;
+// }
 
-function start(name, callback) {
-  return callback(name);
-  return `Status updated !`;
-}
+// function start(name, callback) {
+//   return callback(name);
+//   // return `Status updated !`;
+// }
 
-console.log(start('Shoni', shipGreet)); */
+// console.log(start('Shoni', shipGreet));
 
 //; 4
 /* function call01(name) {

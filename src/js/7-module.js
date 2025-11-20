@@ -152,7 +152,7 @@ console.log(document.querySelector('.image')); */
 
 // #region  //: - Власні атрибути
 
-/* const saveBtn = document.querySelector('button[data-action="save"]');
+const saveBtn = document.querySelector('button[data-action="save"]');
 console.log(saveBtn.dataset.action); // "save"
 
 const closeBtn = document.querySelector('button[data-action="close"]');
@@ -162,7 +162,7 @@ saveBtn.dataset.action = 'update';
 saveBtn.dataset.role = 'admin';
 
 console.log(saveBtn.dataset.action); // "update"
-console.log(saveBtn.dataset.role); // "admin" */
+console.log(saveBtn.dataset.role); // "admin"
 
 //; 2
 
